@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partial application for DOM event-listeners</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sound flex">
+        <div class="sound__container flex__container">
+            <div class="sound__item flex__item">Q</div>
+            <div class="sound__item flex__item">W</div>
+            <div class="sound__item flex__item active">E</div>
+            <div class="sound__item flex__item">R</div>
+            <div class="sound__item flex__item">T</div>
+            <div class="sound__item flex__item">Y</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="piano flex">
+        <div class="piano__container flex__container">
+            <div data-key"Q" class="piano__key flex__item">Q</div>
+            <div data-key"W" class="piano__key flex__item">W</div>
+            <div data-key"E" class="piano__key flex__item">E</div>
+            <div data-key"R" class="piano__key flex__item">R</div>
+            <div data-key"T" class="piano__key flex__item">T</div>
+            <div data-key"Y" class="piano__key flex__item">Y</div>
+        </div>
+    </div>
+
+</body>
+</html>

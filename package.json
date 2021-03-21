@@ -1,0 +1,22 @@
+{
+  "name": "partial-application-eventlisteners",
+  "version": "1.0.0",
+  "description": "Partial application for DOM event-listeners",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arsenykonohov/partial-application-eventlisteners.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arsenykonohov/partial-application-eventlisteners/issues"
+  },
+  "homepage": "https://github.com/arsenykonohov/partial-application-eventlisteners#readme",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}
