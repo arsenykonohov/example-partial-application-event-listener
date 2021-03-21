@@ -15,21 +15,31 @@ body {
 
 
 
-.piano {}
-.piano__container {
+.piano {
+    border: 1px solid #000;
     max-width: 500px;
     margin: 0 auto;
 }
+.piano__container {
+    border: 1px solid red;
+}
 .piano__key {
+    user-select: none;
     border: 1px solid #f5f5f5;
-    background-color: #eee;
+    background-color: #ddd;
     box-shadow: 0px 3px 12px -3px rgba(0,0,0, .4);
     border-radius: 8px;
     line-height: 140px;
     text-align: center;
     cursor: pointer;
-    margin: 10px;
     flex-grow: 1;
+}
+.piano__key + .piano__key {
+    margin-left: 5px;
+}
+.piano__key:hover {
+    /* box-shadow: 0px 0px 3px 0px rgba(0,0,0, .3); */
+    background-color: #e5e5e5;
 }
 
 
