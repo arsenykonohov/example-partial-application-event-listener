@@ -1,39 +1,39 @@
-// SPECIFY TARGET DOM EVENT HANDLERS:
-const list = [...document.querySelectorAll('.piano__key')];
+function setUpListeners(cb) { // aka 'RUN'
+    const list = [...document.querySelectorAll('.piano__key')];
+    // NOTE: cb means 'callback'
+    if (typeof cb === 'function') {
+        // NOTE: here is just no line breaks
+        // NOTE: here is regular function definition
+        // ---------------------------------------------
+        // key listeners:
+        document.addEventListener('keydown', function (e) { cb(e); });
+        document.addEventListener('keyup',   function (e) { cb(e); });
+        // mouse listeners:
+        list.forEach(node => node.addEventListener('mousedown',  function (e) { cb(e); }));
+        list.forEach(node => node.addEventListener('mouseup',    function (e) { cb(e); }));
+        list.forEach(node => node.addEventListener('mouseover',  function (e) { cb(e); }));
+        list.forEach(node => node.addEventListener('mouseleave', function (e) { cb(e); }));
+    } else {
+        console.error('You have to use function definition as callback!');
+    }
+}
 
-// key listeners
-document.addEventListener('keydown', pianoKeydown);
-document.addEventListener('keyup', pianoKeyup);
+setUpListeners(function (event) {
+    const type = event.type;
+    const target = event.target;
+    console.log('EVENT:', type);
+    // switch (true) {
+    //     case '': return;
+    //     case '': return;
+    //     case '': return;
+    //     case '': return;
+    //     case '': return;
+    //     default: console.log('default');
+    // }
+});
 
-// mouse listeners
-list.forEach(node => node.addEventListener('mousedown',  pianoMousedown));
-list.forEach(node => node.addEventListener('mouseup',    pianoMouseup));
-list.forEach(node => node.addEventListener('mouseover',  pianoMouseover));
-list.forEach(node => node.addEventListener('mouseleave', pianoMouseleave));
 
 
-
-
-
+// ====================================================================================
 // IMPLEMENTATION:
 // key manipulation
-function pianoKeydown(e) {
-    console.log('KEY DOWN:', e.code);
-}
-function pianoKeyup(e) {
-    console.log('KEY UP:', e.code);
-}
-
-// mouse manipulation
-function pianoMousedown(e) {
-    console.log('MOUSE DOWN:', e.target.dataset.code);
-}
-function pianoMouseup(e) {
-    console.log('MOUSE UP:', e.target.dataset.code);
-}
-function pianoMouseover(e) {
-    console.log('MOUSE OVER:', e.target.dataset.code);
-}
-function pianoMouseleave(e) {
-    console.log('MOUSE LEAVE:', e.target.dataset.code);
-}
