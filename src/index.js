@@ -1,3 +1,15 @@
+function onHandleClick(el) {
+    el.dataset.oneTwoThre="sldkjfsldkfjslkd";
+    console.log('ONCLICK', el.dataset);
+}
+
+
+
+
+
+
+
+
 function setUpListeners(cb) { // aka 'RUN'
     const list = [...document.querySelectorAll('.piano__key')];
     const piano = document.querySelector('.piano');
